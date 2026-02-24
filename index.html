@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JADWAL TOGEL 2026 </title>
+    <title>JADWAL TOGEL 2026 - METALLIC EDITION</title>
     
     <!-- TAMBAHAN CODING ICON TAB (FAVICON) SESUAI PANAH -->
     <link rel="icon" type="image/png" href="https://i.imgur.com/r76gTnV.png">
     <link rel="apple-touch-icon" href="https://i.imgur.com/r76gTnV.png">
-    
+
     <style>
         :root {
             --toska-glow: #ffffff;
             --bg-dark: #000000;
             --red-alert: #fbff00;
             --done-green: #2ecc71;
-            --done-bg: rgba(6, 54, 56, 0.85);
+            --done-bg: rgba(6, 54, 56, 0.9);
+            /* Warna Metalic */
+            --metal-border: linear-gradient(145deg, #777, #fff, #777, #fff, #777);
+            --metal-shine: #e0e0e0;
         }
 
         body {
-            /* Menambahkan Background sesuai link yang diberikan */
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://i.imgur.com/MaJjySD.jpeg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.932), rgba(0, 0, 0, 0.178)), url('https://i.imgur.com/MaJjySD.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            
             color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -34,22 +35,24 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden; /* Mencegah scroll horizontal karena salju */
+            overflow-x: hidden;
         }
 
-        /* --- STYLING TAMBAHAN JAM & LINK ACUAN --- */
+        /* --- CLOCK --- */
         .live-clock-wrapper {
             font-size: 22px;
             font-weight: 800;
             color: #ffffff;
-            text-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #00f2ff;
             margin-top: 10px;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 5px 20px;
-            border-radius: 10px;
-            border: 1px solid var(--toska-glow);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 8px 25px;
+            border-radius: 12px;
+            border: 3px solid #c2c2c2;
+            box-shadow: 0 0 15px rgb(0, 255, 200);
         }
 
+        /* --- ACUAN BUTTONS --- */
         .container-acuan {
             display: flex;
             gap: 20px;
@@ -59,25 +62,24 @@
 
         .btn-acuan {
             padding: 12px 30px;
-            border-radius: 15px;
+            border-radius: 90px;
             text-decoration: none;
             font-weight: 900;
-            font-size: 14px;
+            font-size: 16px;
             text-transform: uppercase;
             border: 2px solid #fff;
             transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             color: #fff;
         }
 
         .acuan-merah {
-            background: linear-gradient(to right, #ff0000, #800000);
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+            background: linear-gradient(to right, #ff0101, #800000);
+            box-shadow: 0 0 60px rgba(255, 0, 0, 0.7);
         }
 
         .acuan-biru {
             background: linear-gradient(to right, #0044ff, #001a61);
-            box-shadow: 0 0 15px rgba(0, 68, 255, 0.7);
+            box-shadow: 0 0 60px rgba(0, 68, 255, 0.7);
         }
 
         .btn-acuan:hover {
@@ -85,174 +87,185 @@
             filter: brightness(1.2);
             box-shadow: 0 0 25px #fff;
         }
-        /* --- AKHIR STYLING TAMBAHAN --- */
 
-        /* --- STYLING SALJU --- */
-        #snowCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* Agar tidak menghalangi klik pada tabel/tombol */
-            z-index: 0; /* Di atas background, di bawah konten */
-        }
-
-        /* Title Box Neon */
+        /* --- HEADER --- */
         .header-box {
             position: relative;
             z-index: 2;
             background: linear-gradient(145deg, #004b55, #520000);
-            border: 4px solid var(--toska-glow);
+            border: 3px solid #999999;
             box-shadow: 0 0 25px var(--toska-glow), inset 0 0 15px var(--toska-glow);
-            padding: 20px 80px;
-            margin-bottom: 20px;
-            border-radius: 15px;
+            padding: 25px 80px;
+            margin-bottom: 25px;
+            border-radius: 20px;
             text-align: center;
         }
 
         .header-box h1 {
             margin: 0;
-            font-size: 38px;
-            font-weight: 800;
+            font-size: 40px;
+            font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--toska-glow);
-            text-shadow: 0 0 15px var(--toska-glow);
+            letter-spacing: 4px;
+            background: linear-gradient(to bottom, #00ffb3 0%, #ffffff 50%, #fa0000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 5px rgba(0, 255, 234, 0.61));
         }
 
-        /* Container Table */
+        /* --- TABLE METALIC STYLE --- */
         .table-container {
             position: relative;
             z-index: 2;
-            width: 99%;
+            width: 98%;
             max-width: 1650px;
             max-height: 75vh;
             overflow-y: auto;
-            border: 2px solid var(--toska-glow);
-            border-radius: 12px;
-            background: rgba(1, 14, 22, 0.9);
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            /* Bingkai luar Metalic Mengkilat */
+            border: 5px solid;
+            border-image-source: linear-gradient(45deg, #555, #fff, #555, #fff, #555);
+            border-image-slice: 1;
+            box-shadow: 0 0 30px rgba(255,255,255,0.2);
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 16px;
-            border-spacing: 0;
+            font-size: 15px;
         }
 
         thead {
             position: sticky;
             top: 0;
             z-index: 100;
-            background: #1f0000;
+            background: linear-gradient(to bottom, #034749, #000000);
         }
 
+        /* GARIS KOLOM HEADER (METALIC) */
         th {
-            padding: 20px 10px;
+            padding: 22px 10px;
             text-transform: uppercase;
-            color: var(--toska-glow);
+            color: #ffffff;
             font-weight: 800;
-            border-bottom: 3px solid var(--toska-glow);
-            border-right: 1px solid var(--toska-glow);
+            border: 2px solid;
+            border-color: #fff #888 #888 #fff; /* Efek Bevel Metal */
+            text-shadow: 0 0 5px rgba(255,255,255,0.5);
         }
 
+        /* GARIS KOLOM ISI TABEL (METALIC) */
         td {
-            padding: 16px 10px;
-            border-bottom: 1px solid rgba(0, 255, 221, 0.2);
+            padding: 15px 10px;
             text-align: center;
             vertical-align: middle;
-            border-right: 1px solid var(--toska-glow);
-            transition: all 0.3s ease;
+            font-weight: 600;
+            /* Membuat garis kolom terlihat seperti logam mengkilat */
+            border: 1.5px solid;
+            border-color: #666 lab(94.1% 0 -0.01 / 0.397) #025a53 #eee; 
+            transition: all 0.3s;
         }
 
-        td:last-child, th:last-child { border-right: none; }
+        tr:nth-child(even) {
+            background: rgba(24, 23, 23, 0.582);
+        }
 
+        tr:hover {
+            background: rgba(24, 0, 46, 0.993);
+        }
+
+        /* --- ROW DONE --- */
         tr.row-done {
             background-color: var(--done-bg) !important;
         }
         tr.row-done td {
             color: #ffffff !important;
-            text-shadow: 0 0 10px #ffffff;
+            text-shadow: 0 0 20px #ffffff;
+            border-color: #ffffff;
         }
 
-        .pasaran-bold { 
-            color: #fff; 
-            font-weight: 800; 
-            font-size: 18px; 
-        }
-
-        .jadwal-putih { color: #ffffff; font-weight: 700; }
-        .jadwal-merah { 
-            color: var(--red-alert) !important; 
-            font-weight: 800; 
-            text-shadow: 0 0 10px rgba(255, 62, 62, 0.3);
-        }
+        /* --- TEXT COLORS --- */
+        .pasaran-bold { color: #fff; font-weight: 800; font-size: 17px; }
+        .jadwal-putih { color: #ffffff; }
+        .jadwal-merah { color: var(--red-alert) !important; font-weight: 800; }
 
         .shift-malam { color: #03ff25; font-weight: 800; }
         .shift-pagi { color: #0084ff; font-weight: 800; }
         .shift-sore { color: #ffae00; font-weight: 800; }
 
-        .time-buka { color: var(--toska-glow); font-weight: 800; }
+        .time-buka { color: #00f2ff; font-weight: 800; }
         .time-tutup { color: #ff9f43; font-weight: 800; }
 
+        /* --- BUTTONS --- */
         .btn-link {
             text-decoration: none;
-            color: #fff;
-            background: rgba(5, 83, 25, 0.7);
-            padding: 10px 45px;
-            border-radius: 100px;
-            font-size: 13px;
+            color: #000;
+            background: linear-gradient(to bottom, #fff, #aaa);
+            padding: 8px 30px;
+            border-radius: 5px;
+            font-size: 12px;
             font-weight: 900;
-            border: 1px solid var(--toska-glow);
+            border: 1px solid #fff;
             transition: 0.3s;
             display: inline-block;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         .btn-link:hover {
-            background: var(--toska-glow);
-            color: #000;
-            box-shadow: 0 0 15px var(--toska-glow);
+            filter: brightness(1.3);
+            transform: translateY(-2px);
         }
 
         .btn-action {
             cursor: pointer;
-            padding: 10px 20px;
-            border-radius: 25px;
-            border: 2px solid var(--toska-glow);
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 2px solid #fff;
             background: transparent;
-            color: var(--toska-glow);
+            color: #fff;
             font-weight: 800;
-            transition: all 0.3s ease;
+            transition: 0.3s;
             text-transform: uppercase;
-            font-size: 14px;
-            min-width: 120px;
+            min-width: 100px;
         }
 
         .btn-action.done-btn {
             background: var(--done-green);
-            border-color: var(--done-green);
+            border-color: #fff;
             color: white;
             box-shadow: 0 0 15px var(--done-green);
         }
 
-        .table-container::-webkit-scrollbar { width: 10px; }
-        .table-container::-webkit-scrollbar-track { background: #050a05; }
-        .table-container::-webkit-scrollbar-thumb { background: var(--toska-glow); border-radius: 10px; }
+        /* --- SNOW CANVAS --- */
+        #snowCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Scrollbar */
+        .table-container::-webkit-scrollbar { width: 12px; }
+        .table-container::-webkit-scrollbar-track { background: #111; }
+        .table-container::-webkit-scrollbar-thumb { 
+            background: linear-gradient(#555, #fff, #555); 
+            border-radius: 10px; 
+            border: 2px solid #111;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Canvas untuk Salju -->
     <canvas id="snowCanvas"></canvas>
 
     <div class="header-box">
         <h1>❄️ JADWAL PASARAN TOGEL 2026 ❄️</h1>
-        <!-- TAMBAHAN JAM DAN TANGGAL -->
         <div id="liveClock" class="live-clock-wrapper">Memuat Waktu...</div>
     </div>
 
-    <!-- TAMBAHAN LINK ACUAN MERAH BIRU -->
     <div class="container-acuan">
         <a href="https://w6.ceriawlatogel88.net/wap" target="_blank" class="btn-acuan acuan-merah">🔴 LINK ACUAN MERAH WLA</a>
         <a href="https://www.vegastogel.net/wap" target="_blank" class="btn-acuan acuan-biru">🔵 LINK ACUAN BIRU WLA</a>
@@ -263,11 +276,11 @@
             <thead>
                 <tr>
                     <th>NO</th>
-                    <th>SHIFT </th>
-                    <th>NAMA PASARAN </th>
-                    <th>JADWAL </th>
-                    <th>BUKA </th>
-                    <th>TUTUP </th>
+                    <th>SHIFT</th>
+                    <th>NAMA PASARAN</th>
+                    <th>JADWAL</th>
+                    <th>BUKA</th>
+                    <th>TUTUP</th>
                     <th>SITUS RESMI</th>
                     <th>LIVE DRAW</th>
                     <th>ACTION</th>
@@ -278,7 +291,6 @@
     </div>
 
     <script>
-        /* --- SCRIPT JAM OTOMATIS JAKARTA (WIB) --- */
         function updateClock() {
             const now = new Date();
             const options = { 
@@ -415,7 +427,7 @@
 
         renderTable();
 
-        /* --- SCRIPT SALJU BERGERAK (CANVAS) --- */
+        // Snow Script
         const canvas = document.getElementById('snowCanvas');
         const ctx = canvas.getContext('2d');
         let flakes = [];
@@ -424,7 +436,6 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         }
-
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
@@ -432,45 +443,30 @@
             return {
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                radius: Math.random() * 3 + 1, // Ukuran butiran salju
-                speed: Math.random() * 2 + 0.5, // Kecepatan jatuh
-                wind: Math.random() * 1 - 0.5, // Gerakan samping sedikit
-                opacity: Math.random() * 0.5 + 0.5 // Kecerahan butiran
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 2 + 0.5,
+                wind: Math.random() * 1 - 0.5,
+                opacity: Math.random() * 0.5 + 0.5
             };
         }
 
-        // Inisialisasi banyak butiran salju (misal: 300 butir)
-        for (let i = 0; i < 300; i++) {
-            flakes.push(createFlake());
-        }
+        for (let i = 0; i < 250; i++) flakes.push(createFlake());
 
         function drawSnow() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = "rgba(255, 255, 255, 0.9)"; // Warna putih terang
+            ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
             ctx.beginPath();
-
             for (let i = 0; i < flakes.length; i++) {
                 let f = flakes[i];
                 ctx.moveTo(f.x, f.y);
                 ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2, true);
-                
-                // Update posisi salju
                 f.y += f.speed;
                 f.x += f.wind;
-
-                // Jika keluar dari bawah layar, balikkan ke atas
-                if (f.y > canvas.height) {
-                    flakes[i] = createFlake();
-                    flakes[i].y = -10;
-                }
-                // Jika keluar samping kiri/kanan
-                if (f.x > canvas.width) f.x = 0;
-                if (f.x < 0) f.x = canvas.width;
+                if (f.y > canvas.height) { flakes[i] = createFlake(); flakes[i].y = -10; }
             }
             ctx.fill();
             requestAnimationFrame(drawSnow);
         }
-
         drawSnow();
     </script>
 </body>
