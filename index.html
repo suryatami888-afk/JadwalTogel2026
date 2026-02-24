@@ -13,7 +13,7 @@
         :root {
             --toska-glow: #ffffff;
             --bg-dark: #000000;
-            --red-alert: #fbff00;
+            --red-alert: #ff0000; /* Tetap Merah sesuai permintaan sebelumnya */
             --done-green: #2ecc71;
             --done-bg: rgba(6, 54, 56, 0.9);
             /* Warna Metalic */
@@ -30,7 +30,7 @@
             color: #e0e0e0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 15px; /* Mengurangi padding body agar lebih compact */
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,9 +38,37 @@
             overflow-x: hidden;
         }
 
+        /* --- STYLING FOTO MASCOT --- */
+        .mascot-header {
+            width: 120px; /* Ukuran logo di header */
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+        }
+
+        .mascot-floating {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 180px; /* Ukuran maskot melayang */
+            z-index: 9999;
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.4));
+            animation: floatingAnim 3s ease-in-out infinite;
+            pointer-events: none; /* Agar tidak mengganggu klik mouse */
+        }
+
+        @keyframes floatingAnim {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        /* Sembunyikan maskot melayang di layar hp kecil agar tidak menutupi tabel */
+        @media screen and (max-width: 768px) {
+            .mascot-floating { width: 100px; bottom: 10px; left: 10px; opacity: 0.7; }
+        }
+
         /* --- CLOCK --- */
         .live-clock-wrapper {
-            font-size: 20px; /* Diperkecil sedikit */
+            font-size: 20px;
             font-weight: 800;
             color: #ffffff;
             text-shadow: 0 0 10px #ff0000, 0 0 20px #00f2ff;
@@ -65,7 +93,7 @@
             border-radius: 90px;
             text-decoration: none;
             font-weight: 900;
-            font-size: 14px; /* Diperkecil agar proposional */
+            font-size: 14px;
             text-transform: uppercase;
             border: 2px solid #fff;
             transition: 0.3s;
@@ -89,15 +117,18 @@
             background: linear-gradient(145deg, #004b55, #520000);
             border: 3px solid #999999;
             box-shadow: 0 0 20px var(--toska-glow), inset 0 0 10px var(--toska-glow);
-            padding: 15px 50px; /* Lebih pendek */
+            padding: 20px 50px;
             margin-bottom: 20px;
             border-radius: 15px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .header-box h1 {
             margin: 0;
-            font-size: 32px; /* Ukuran h1 diperkecil agar tidak memakan tempat */
+            font-size: 32px;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 3px;
@@ -107,12 +138,12 @@
             filter: drop-shadow(0 0 5px rgba(0, 255, 234, 0.61));
         }
 
-        /* --- TABLE METALIC STYLE --- (BAGIAN YANG DIUBAH AGAR TIDAK TERLALU BESAR) */
+        /* --- TABLE METALIC STYLE --- */
         .table-container {
             position: relative;
             z-index: 2;
-            width: 92%; /* Diperkecil dari 98% agar ada jarak di sisi kiri-kanan */
-            max-width: 1350px; /* Batas maksimal lebar agar tulisan tetap fokus di tengah */
+            width: 92%;
+            max-width: 1350px;
             max-height: 72vh;
             overflow-y: auto;
             background: rgba(0, 0, 0, 0.88);
@@ -126,7 +157,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px; /* Ukuran teks isi tabel agar pas */
+            font-size: 14px;
             letter-spacing: 0.3px;
         }
 
@@ -138,7 +169,7 @@
         }
 
         th {
-            padding: 12px 8px; /* Diperkecil agar header tidak terlalu tinggi */
+            padding: 12px 8px;
             text-transform: uppercase;
             color: #ffffff;
             font-weight: 800;
@@ -149,7 +180,7 @@
         }
 
         td {
-            padding: 8px 6px; /* Diperpendek agar baris tidak terlalu gemuk */
+            padding: 8px 6px;
             text-align: center;
             vertical-align: middle;
             font-weight: 700;
@@ -181,7 +212,7 @@
             text-decoration: none;
             color: #000;
             background: linear-gradient(to bottom, #fff, #aaa);
-            padding: 5px 15px; /* Tombol diperkecil */
+            padding: 5px 15px;
             border-radius: 4px;
             font-size: 11px;
             font-weight: 900;
@@ -192,7 +223,7 @@
 
         .btn-action {
             cursor: pointer;
-            padding: 6px 12px; /* Tombol diperkecil */
+            padding: 6px 12px;
             border-radius: 4px;
             border: 1.5px solid #fff;
             background: transparent;
@@ -232,7 +263,13 @@
 
     <canvas id="snowCanvas"></canvas>
 
+    <!-- FOTO MASKOT MELAYANG -->
+    <img src="https://i.imgur.com/Wp02yYe.png" class="mascot-floating" alt="Mascot">
+
     <div class="header-box">
+        <!-- FOTO LOGO DI HEADER -->
+        <img src="https://i.imgur.com/Wp02yYe.png" class="mascot-header" alt="Logo">
+        
         <h1>❄️ JADWAL PASARAN TOGEL 2026 ❄️</h1>
         <div id="liveClock" class="live-clock-wrapper">Memuat Waktu...</div>
     </div>
