@@ -13,7 +13,7 @@
         :root {
             --toska-glow: #ffffff;
             --bg-dark: #000000;
-            --red-alert: #ff0000; /* DIUBAH JADI MERAH SESUAI PERMINTAAN */
+            --red-alert: #ff0000; /* Warna Merah untuk Jadwal Khusus */
             --done-green: #2ecc71;
             --done-bg: rgba(6, 54, 56, 0.9);
             /* Warna Metalic */
@@ -38,25 +38,25 @@
             overflow-x: hidden;
         }
 
-        /* --- STYLING LOGO DI AREA KUNING (KEREN & BERGERAK) --- */
-        .container-logo-kuning {
+        /* --- CSS TAMBAHAN UNTUK FOTO DI TANDA KUNING (BERGERAK) --- */
+        .wrapper-foto-kuning {
             width: 92%;
             max-width: 1350px;
             display: flex;
-            justify-content: flex-start; /* Aliran ke kiri sesuai tanda kuning */
+            justify-content: flex-start;
             margin-bottom: 5px;
             z-index: 10;
         }
 
-        .logo-bergerak-keren {
-            width: 220px; /* Ukuran pas untuk logo TogelUp */
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
-            animation: floatAnim 3s ease-in-out infinite;
+        .foto-animasi {
+            width: 220px; /* Ukuran menyesuaikan */
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+            animation: gerakKeren 3s ease-in-out infinite;
         }
 
-        @keyframes floatAnim {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.03); }
+        @keyframes gerakKeren {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
         }
 
         /* --- CLOCK --- */
@@ -128,7 +128,7 @@
             filter: drop-shadow(0 0 5px rgba(0, 255, 234, 0.61));
         }
 
-        /* --- TABLE METALIC STYLE --- */
+        /* --- TABLE METALIC STYLE (COMPACT) --- */
         .table-container {
             position: relative;
             z-index: 2;
@@ -263,9 +263,9 @@
         <a href="https://www.vegastogel.net/wap" target="_blank" class="btn-acuan acuan-biru">🔵 LINK ACUAN BIRU</a>
     </div>
 
-    <!-- INI TEMPAT FOTO DI TANDA KUNING (KEREN & BERGERAK) -->
-    <div class="container-logo-kuning">
-        <img src="https://i.imgur.com/Wp02yYe.png" class="logo-bergerak-keren" alt="TogelUp Logo">
+    <!-- AREA FOTO DI TANDA KUNING (BERGERAK) -->
+    <div class="wrapper-foto-kuning">
+        <img src="https://i.imgur.com/Wp02yYe.png" class="foto-animasi" alt="TogelUp Logo">
     </div>
 
     <div class="table-container">
