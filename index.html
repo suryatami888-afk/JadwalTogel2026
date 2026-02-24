@@ -6,8 +6,8 @@
     <title>JADWAL TOGEL 2026 - METALLIC EDITION</title>
     
     <!-- TAMBAHAN CODING ICON TAB (FAVICON) SESUAI PANAH -->
-    <link rel="icon" type="image/png" href="https://i.imgur.com/UdeyiMV.png">
-    <link rel="apple-touch-icon" href="https://i.imgur.com/UdeyiMV.png">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/r76gTnV.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/r76gTnV.png">
 
     <style>
         :root {
@@ -36,32 +36,29 @@
             align-items: center;
             min-height: 100vh;
             overflow-x: hidden;
-            position: relative; /* Ditambahkan untuk posisi foto custom */
+            position: relative; /* Ditambahkan agar posisi foto absolut berfungsi dengan baik */
         }
 
-        /* --- CODING FOTO TAMBAHAN (Sesuai Panah Kuning) --- */
-        .foto-custom {
+        /* --- TAMBAHAN CODING FOTO BERGERAK (PANAH KUNING) --- */
+        .foto-tambahan {
             position: absolute;
-            top: 30px;
-            left: 50px;
-            width: 180px; /* Ukuran bisa disesuaikan */
-            z-index: 999;
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
-            animation: animasiKeren 3s ease-in-out infinite;
+            top: 160px; /* Posisi vertikal sesuai kotak kuning */
+            left: 5%;   /* Posisi horizontal di sebelah kiri */
+            width: 220px; /* Ukuran foto */
+            z-index: 10;
+            animation: gerakKeren 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
         }
 
-        @keyframes animasiKeren {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg) scale(1.05); }
+        @keyframes gerakKeren {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
         }
 
-        /* Responsif untuk HP agar foto tidak menutupi teks */
-        @media (max-width: 768px) {
-            .foto-custom {
-                width: 100px;
-                left: 10px;
-                top: 10px;
-            }
+        /* Sembunyikan foto di layar kecil agar tidak menutupi tabel utama */
+        @media (max-width: 1100px) {
+            .foto-tambahan { display: none; }
         }
 
         /* --- CLOCK --- */
@@ -133,12 +130,12 @@
             filter: drop-shadow(0 0 5px rgba(0, 255, 234, 0.61));
         }
 
-        /* --- TABLE METALIC STYLE --- */
+        /* --- TABLE METALIC STYLE --- (BAGIAN YANG DIUBAH AGAR TIDAK TERLALU BESAR) */
         .table-container {
             position: relative;
             z-index: 2;
-            width: 92%; 
-            max-width: 1350px; 
+            width: 92%; /* Diperkecil dari 98% agar ada jarak di sisi kiri-kanan */
+            max-width: 1350px; /* Batas maksimal lebar agar tulisan tetap fokus di tengah */
             max-height: 72vh;
             overflow-y: auto;
             background: rgba(0, 0, 0, 0.88);
@@ -152,7 +149,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 14px; 
+            font-size: 14px; /* Ukuran teks isi tabel agar pas */
             letter-spacing: 0.3px;
         }
 
@@ -164,7 +161,7 @@
         }
 
         th {
-            padding: 12px 8px; 
+            padding: 12px 8px; /* Diperkecil agar header tidak terlalu tinggi */
             text-transform: uppercase;
             color: #ffffff;
             font-weight: 800;
@@ -175,7 +172,7 @@
         }
 
         td {
-            padding: 8px 6px; 
+            padding: 8px 6px; /* Diperpendek agar baris tidak terlalu gemuk */
             text-align: center;
             vertical-align: middle;
             font-weight: 700;
@@ -207,7 +204,7 @@
             text-decoration: none;
             color: #000;
             background: linear-gradient(to bottom, #fff, #aaa);
-            padding: 5px 15px; 
+            padding: 5px 15px; /* Tombol diperkecil */
             border-radius: 4px;
             font-size: 11px;
             font-weight: 900;
@@ -218,7 +215,7 @@
 
         .btn-action {
             cursor: pointer;
-            padding: 6px 12px; 
+            padding: 6px 12px; /* Tombol diperkecil */
             border-radius: 4px;
             border: 1.5px solid #fff;
             background: transparent;
@@ -256,8 +253,8 @@
 </head>
 <body>
 
-    <!-- FOTO SESUAI PANAH KUNING -->
-    <img src="https://i.imgur.com/r76gTnV.png" class="foto-custom" alt="Logo Custom">
+    <!-- FOTO TAMBAHAN SESUAI PERMINTAAN -->
+    <img src="https://i.imgur.com/UdeyiMV.png" class="foto-tambahan">
 
     <canvas id="snowCanvas"></canvas>
 
@@ -324,8 +321,69 @@
             { no: 11, shift: "MALAM", nama: "BRUNEI 02", jadwal: "SENIN - MINGGU", buka: "02:30 WIB", tutup: "02:45 WIB", resmi: "https://bruneipools.com/live-draw.html", live: "https://bruneipools.com/draw-result" },
             { no: 12, shift: "MALAM", nama: "HOKIDRAW 03:00", jadwal: "SENIN - MINGGU", buka: "03:00 WIB", tutup: "03:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
             { no: 13, shift: "MALAM", nama: "OREGON03", jadwal: "SENIN - MINGGU", buka: "03:50 WIB", tutup: "04:00 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/38.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/3005.html" },
-            { no: 14, shift: "MALAM", nama: "HOKIDRAW 04:00", jadwal: "SENIN - MINGGU", buka: "04:00 WIB", tutup: "04:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" }
-            // ... (Data lainnya tetap sama sesuai kodingan asli Anda)
+            { no: 14, shift: "MALAM", nama: "HOKIDRAW 04:00", jadwal: "SENIN - MINGGU", buka: "04:00 WIB", tutup: "04:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 15, shift: "MALAM", nama: "HOKIDRAW 05:00", jadwal: "SENIN - MINGGU", buka: "05:00 WIB", tutup: "05:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 16, shift: "MALAM", nama: "HOKIDRAW 06:00", jadwal: "SENIN - MINGGU", buka: "06:00 WIB", tutup: "06:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 17, shift: "MALAM", nama: "OREGON06", jadwal: "SENIN - MINGGU", buka: "06:50 WIB", tutup: "07:00 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/39.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/4.html" },
+            { no: 18, shift: "MALAM", nama: "HOKIDRAW 07:00", jadwal: "SENIN - MINGGU", buka: "07:00 WIB", tutup: "07:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 19, shift: "PAGI", nama: "HOKIDRAW 08:00", jadwal: "SENIN - MINGGU", buka: "08:00 WIB", tutup: "08:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 20, shift: "PAGI", nama: "HOKIDRAW 09:00", jadwal: "SENIN - MINGGU", buka: "09:00 WIB", tutup: "09:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 21, shift: "PAGI", nama: "CALIFORNIA", jadwal: "SENIN - MINGGU", buka: "09:25 WIB", tutup: "09:30 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/28.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/3019.html" },
+            { no: 22, shift: "PAGI", nama: "FLORIDAEVE", jadwal: "SENIN - MINGGU", buka: "09:35 WIB", tutup: "09:45 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/4.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/36.html" },
+            { no: 23, shift: "PAGI", nama: "BANGKOK 0930", jadwal: "SENIN - MINGGU", buka: "09:15 WIB", tutup: "09:30 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/42.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/28.html" },
+            { no: 24, shift: "PAGI", nama: "OREGON09", jadwal: "SENIN - MINGGU", buka: "09:50 WIB", tutup: "10:00 WIB", resmi: "https://bangkokpoolstoday.com/liveDraw", live: "https://bangkokpoolstoday.com/drawResult" },
+            { no: 25, shift: "PAGI", nama: "HOKIDRAW 10:00", jadwal: "SENIN - MINGGU", buka: "10:00 WIB", tutup: "10:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 26, shift: "PAGI", nama: "NEWYORKEVE", jadwal: "SENIN - MINGGU", buka: "10:25 WIB", tutup: "10:35 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/25.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/3013.html" },
+            { no: 27, shift: "PAGI", nama: "KENTUCKYEVE", jadwal: "SENIN - MINGGU", buka: "10:45 WIB", tutup: "11:00 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/50.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/3023.html" },
+            { no: 28, shift: "PAGI", nama: "TOTOCAMBODIA", jadwal: "SENIN - MINGGU", buka: "10.45 WIB", tutup: "11.00 WIB", resmi: "https://totocambodialive.com/live-draw.html", live: "https://www.youtube.com/@TotoCambodiaOfficial/featured" },
+            { no: 29, shift: "PAGI", nama: "HOKIDRAW 11:00", jadwal: "SENIN - MINGGU", buka: "11:00 WIB", tutup: "11:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 30, shift: "PAGI", nama: "CHELSEA 11", jadwal: "SENIN - MINGGU", buka: "11:00 WIB", tutup: "11:15 WIB", resmi: "https://chelseapools.co.uk/live-draw", live: "https://chelseapools.co.uk/draw-result" },
+            { no: 31, shift: "PAGI", nama: "CAROLINAEVE", jadwal: "SENIN - MINGGU", buka: "11:17 WIB", tutup: "11:22 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/32.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/32.html" },
+            { no: 32, shift: "PAGI", nama: "HOKIDRAW 12:00", jadwal: "SENIN - MINGGU", buka: "12:00 WIB", tutup: "12:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 33, shift: "PAGI", nama: "BULLSEYE", jadwal: "SENIN - MINGGU", buka: "12:00 WIB", tutup: "12:15 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/35.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/35.html" },
+            { no: 34, shift: "PAGI", nama: "POIPET12", jadwal: "SENIN - MINGGU", buka: "12:15 WIB", tutup: "12:30 WIB", resmi: "https://www.youtube.com/@poipetlottery70/featured", live: "https://poipetlottery.com/liveresult" },
+            { no: 35, shift: "PAGI", nama: "OREGON12", jadwal: "SENIN - MINGGU", buka: "12:50 WIB", tutup: "13:00 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/40.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/29.html" },
+            { no: 36, shift: "PAGI", nama: "HOKIDRAW 13:00", jadwal: "SENIN - MINGGU", buka: "13:00 WIB", tutup: "13:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 37, shift: "PAGI", nama: "TOTOMACAU SIANG", jadwal: "SENIN - MINGGU", buka: "13:00 WIB", tutup: "13:15 WIB", resmi: "https://kick.com/live-ttm4d", live: "https://kick.com/live-ttm4d" },
+            { no: 38, shift: "PAGI", nama: "SYDNEY", jadwal: "SENIN - MINGGU", buka: "13:49 WIB", tutup: "14:05 WIB", resmi: "https://kick.com/sydney-lotto-official", live: "https://www.youtube.com/@SYDNEYLOTTOOFFICIAL1" },
+            { no: 39, shift: "PAGI", nama: "HOKIDRAW 14:00", jadwal: "SENIN - MINGGU", buka: "14:00 WIB", tutup: "14:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 40, shift: "PAGI", nama: "JAKARTA 1400", jadwal: "SENIN - MINGGU", buka: "13:55 WIB", tutup: "14:10 WIB", resmi: "https://kick.com/studio-live-game", live: "https://kick.com/studio-live-game" },
+            { no: 41, shift: "PAGI", nama: "BRUNEI 14", jadwal: "SENIN - MINGGU", buka: "14:30 WIB", tutup: "14:45 WIB", resmi: "https://bruneipools.com/live-draw", live: "https://bruneipools.com/draw-result" },
+            { no: 42, shift: "PAGI", nama: "HOKIDRAW 15:00", jadwal: "SENIN - MINGGU", buka: "15:00 WIB", tutup: "15:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 43, shift: "PAGI", nama: "CHELSEA 15", jadwal: "SENIN - MINGGU", buka: "15:00 WIB", tutup: "15:15 WIB", resmi: "https://chelseapools.co.uk/live-draw", live: "https://chelseapools.co.uk/draw-result" },
+            { no: 44, shift: "PAGI", nama: "TOTOMACAU 5D SORE", jadwal: "SENIN - MINGGU", buka: "15:15 WIB", tutup: "15:30 WIB", resmi: "https://kick.com/studio-live-game", live: "https://kick.com/studio-live-game" },
+            { no: 45, shift: "PAGI", nama: "TOTO MALI 1530", jadwal: "SENIN - MINGGU", buka: "15:15 WIB", tutup: "15:30 WIB", resmi: "https://totomali.com/live-draw.html", live: "https://www.youtube.com/@TotoMaliLive/videos" },
+            { no: 46, shift: "PAGI", nama: "POIPET15", jadwal: "SENIN - MINGGU", buka: "15:15 WIB", tutup: "15:30 WIB", resmi: "https://www.youtube.com/@poipetlottery70/featured", live: "https://poipetlottery.com/liveresult" },
+            { no: 47, shift: "SORE", nama: "TOTOMACAU SORE", jadwal: "SENIN - MINGGU", buka: "16:00 WIB", tutup: "16:15 WIB", resmi: "https://kick.com/live-ttm4d", live: "https://kick.com/live-ttm4d" },
+            { no: 48, shift: "SORE", nama: "HOKIDRAW 16:00", jadwal: "SENIN - MINGGU", buka: "16:00 WIB", tutup: "16:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 49, shift: "SORE", nama: "HUAHIN 1630", jadwal: "SENIN - MINGGU", buka: "16:15 WIB", tutup: "16.30 WIB", resmi: "https://huahinlottery.com/livedraw", live: "https://www.youtube.com/@huahinlottery5727/videos" },
+            { no: 50, shift: "SORE", nama: "HOKIDRAW 17:00", jadwal: "SENIN - MINGGU", buka: "17:00 WIB", tutup: "17:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 51, shift: "SORE", nama: "KING KONG4D SORE", jadwal: "SENIN - MINGGU", buka: "17:00 WIB", tutup: "17.15 WIB", resmi: "https://kick.com/king-kong-pools", live: "https://www.youtube.com/@KingKongPools/streams" },
+            { no: 52, shift: "SORE", nama: "SINGAPORE", jadwal: "SELASA & JUM'AT ( LIBUR )", buka: "17:30 WIB", tutup: "17:45 WIB", resmi: "https://www7.ttjbronze.com/", live: "https://www5.jayatgbagus6.com/" },
+            { no: 53, shift: "SORE", nama: "HOKIDRAW 18:00", jadwal: "SENIN - MINGGU", buka: "18:00 WIB", tutup: "18:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 54, shift: "SORE", nama: "MAGNUM4D", jadwal: "RABU, SABTU & MINGGU", buka: "18:10 WIB", tutup: "18:40 WIB", resmi: "https://magnum4d.my/en/", live: "https://www.fast4dking.com/" },
+            { no: 55, shift: "SORE", nama: "TOTOMACAU MALAM-I", jadwal: "SENIN - MINGGU", buka: "19:00 WIB", tutup: "19:15 WIB", resmi: "https://kick.com/live-ttm4d", live: "https://kick.com/live-ttm4d" },
+            { no: 56, shift: "SORE", nama: "HOKIDRAW 19:00", jadwal: "SENIN - MINGGU", buka: "19:00 WIB", tutup: "19:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 57, shift: "SORE", nama: "CHELSEA 19", jadwal: "SENIN - MINGGU", buka: "19:00 WIB", tutup: "19:15 WIB", resmi: "https://chelseapools.co.uk/live-draw", live: "https://chelseapools.co.uk/draw-result" },
+            { no: 58, shift: "SORE", nama: "POIPET19", jadwal: "SENIN - MINGGU", buka: "19:30 WIB", tutup: "19:45 WIB", resmi: "https://www.youtube.com/@poipetlottery70/featured", live: "https://poipetlottery.com/liveresult" },
+            { no: 59, shift: "SORE", nama: "PCSO", jadwal: "MINGGU ( LIBUR ) <br> SENIN , RABU, JUMAT acuan 4D Lotto <br> SELASA, KAMIS,SABTU acuan 6D Lotto", buka: "19:50 WIB", tutup: "20:10 WIB", resmi: "http://www.vegaspoker.cc/wap/lastnumber/11.html", live: "https://w6.ceriawlatogel88.net/wap/lastnumber/11.html" },
+            { no: 60, shift: "SORE", nama: "HOKIDRAW 20:00", jadwal: "SENIN - MINGGU", buka: "20:00 WIB", tutup: "20:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 61, shift: "SORE", nama: "TOTOMALI2030", jadwal: "SENIN - MINGGU", buka: "20:15 WIB", tutup: "20.30 WIB", resmi: "https://totomali.com/live-draw.html", live: "https://www.youtube.com/@TotoMaliLive/videos" },
+            { no: 62, shift: "SORE", nama: "HUAHIN 2100", jadwal: "SENIN - MINGGU", buka: "20:45 WIB", tutup: "21.00 WIB", resmi: "https://huahinlottery.com/livedraw", live: "https://www.youtube.com/@huahinlottery5727/videos" },
+            { no: 63, shift: "SORE", nama: "HOKIDRAW 21:00", jadwal: "SENIN - MINGGU", buka: "21:00 WIB", tutup: "21:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 64, shift: "SORE", nama: "CHELSEA 21", jadwal: "SENIN - MINGGU", buka: "21:00 WIB", tutup: "21:15 WIB", resmi: "https://chelseapools.co.uk/live-draw.html", live: "https://chelseapools.co.uk/draw-result.html" },
+            { no: 65, shift: "SORE", nama: "TOTOMACAU 5D MALAM", jadwal: "SENIN - MINGGU", buka: "21:15 WIB", tutup: "21:30 WIB", resmi: "https://kick.com/studio-live-game", live: "https://kick.com/studio-live-game" },
+            { no: 66, shift: "SORE", nama: "NEVADA", jadwal: "SENIN - MINGGU", buka: "21:15 WIB", tutup: "21:30 WIB", resmi: "https://www.nevadalottery.us/", live: "https://www.nevadalottery.us/" },
+            { no: 67, shift: "SORE", nama: "BRUNEI 21", jadwal: "SENIN - MINGGU", buka: "21:30 WIB", tutup: "21:45 WIB", resmi: "https://bruneipools.com/live-draw", live: "https://bruneipools.com/draw-result" },
+            { no: 68, shift: "SORE", nama: "TOTOMACAU MALAM-II", jadwal: "SENIN - MINGGU", buka: "22:00 WIB", tutup: "22:15 WIB", resmi: "https://kick.com/live-ttm4d", live: "https://kick.com/live-ttm4d" },
+            { no: 69, shift: "SORE", nama: "HOKIDRAW 22:00", jadwal: "SENIN - MINGGU", buka: "22:00 WIB", tutup: "22:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 70, shift: "SORE", nama: "POIPET22", jadwal: "SENIN - MINGGU", buka: "22:30 WIB", tutup: "22:45 WIB", resmi: "https://www.youtube.com/@poipetlottery70/featured", live: "https://poipetlottery.com/liveresult" },
+            { no: 71, shift: "SORE", nama: "HONGKONG", jadwal: "SENIN - MINGGU", buka: "22:59 WIB", tutup: "23:15 WIB", resmi: "https://kick.com/hongkong-lotto-official", live: "https://www.youtube.com/@hngkonglotto/streams" },
+            { no: 72, shift: "SORE", nama: "TOTOMACAU MALAM-III", jadwal: "SENIN - MINGGU", buka: "23:00 WIB", tutup: "23:15 WIB", resmi: "https://kick.com/live-ttm4d", live: "https://kick.com/live-ttm4d" },
+            { no: 73, shift: "SORE", nama: "HOKIDRAW 23:00", jadwal: "SENIN - MINGGU", buka: "23:00 WIB", tutup: "23:00 WIB", resmi: "https://hokidraw.com/live-draw.html", live: "https://www.youtube.com/@Hokidraw/streams" },
+            { no: 74, shift: "SORE", nama: "TOTOMALI2330", jadwal: "SENIN - MINGGU", buka: "23:15 WIB", tutup: "23:30 WIB", resmi: "https://totomali.com/live-draw.html", live: "https://www.youtube.com/@TotoMaliLive/videos" },
+            { no: 75, shift: "SORE", nama: "JAKARTA 2330", jadwal: "SENIN - MINGGU", buka: "23:25 WIB", tutup: "23:40 WIB", resmi: "https://kick.com/studio-live-game", live: "https://kick.com/studio-live-game" },
+            { no: 76, shift: "SORE", nama: "KING KONG4D MALAM", jadwal: "SENIN - MINGGU", buka: "23:30 WIB", tutup: "23:45 WIB", resmi: "https://kick.com/king-kong-pools", live: "https://www.youtube.com/@KingKongPools/streams" }
         ];
 
         const tableBody = document.getElementById('tableBody');
@@ -410,4 +468,3 @@
     </script>
 </body>
 </html>
-
